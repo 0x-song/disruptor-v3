@@ -83,4 +83,7 @@ public class SingleProducerSequencer {
         return ringBufferSize;
     }
 
+    public Sequence getCurrentProducerSequence() {
+        return currentProducerSequence;
+    }
 }

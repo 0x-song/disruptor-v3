@@ -69,4 +69,7 @@ public class RingBuffer<T> {
         return new RingBuffer<E>(singleProducerSequencer, eventModelFactory);
     }
 
+    public Sequence getCurrentProducerSequencer() {
+        return singleProducerSequencer.getCurrentProducerSequence();
+    }
 }

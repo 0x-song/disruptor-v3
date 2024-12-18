@@ -51,4 +51,8 @@ public class Sequence {
     public void lazySet(long value) {
         unsafe.putOrderedLong(this, value_offset, value);
     }
+
+    public boolean compareAndSet(long expected, long update) {
+        return unsafe.compareAndSwapLong(this, value_offset, expected, update);
+    }
 }
