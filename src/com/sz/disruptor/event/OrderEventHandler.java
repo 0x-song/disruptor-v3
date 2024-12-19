@@ -18,6 +18,13 @@ public class OrderEventHandler implements EventHandler<OrderEventModel>{
 
     @Override
     public void consume(OrderEventModel event, long sequence, boolean endOfBatch) {
+//        if(name.equals("consumerA")){
+//            try {
+//                Thread.sleep(2000);
+//            } catch (InterruptedException e) {
+//                throw new RuntimeException(e);
+//            }
+//        }
         System.out.println(name + "消费事件" + event + " com.sz.disruptor.sequence=" + sequence + " endOfBatch=" + endOfBatch);
     }
 }

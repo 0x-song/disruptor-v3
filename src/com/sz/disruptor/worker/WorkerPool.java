@@ -42,6 +42,7 @@ public class WorkerPool<T> {
     }
 
     //这个方法是做什么呢？？？
+    //向外暴露的当前消费者处理的序列，需要让生产者感知到，防止超过一圈
     public Sequence[] getCurrentWorkerSequences(){
         Sequence[] sequences = new Sequence[workProcessorList.size() + 1];
         for (int i = 0; i < workProcessorList.size(); i++) {

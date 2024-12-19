@@ -75,8 +75,8 @@ public class SingleProducerSequencer {
         return new SequenceBarrier(this.currentProducerSequence, this.waitStrategy, new ArrayList<>(Arrays.asList(dependenceSequences)));
     }
 
-    public void addGatingConsumerSequenceList(Sequence gatingConsumerSequence){
-        this.gatingConsumerSequenceList.add(gatingConsumerSequence);
+    public void addGatingConsumerSequenceList(Sequence... gatingConsumerSequence){
+        gatingConsumerSequenceList.addAll(Arrays.asList(gatingConsumerSequence));
     }
 
     public int getRingBufferSize() {

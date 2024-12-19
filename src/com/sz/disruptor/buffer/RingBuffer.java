@@ -52,7 +52,7 @@ public class RingBuffer<T> {
         singleProducerSequencer.publish(index);
     }
 
-    public void addGatingConsumerSequence(Sequence consumerSequence){
+    public void addGatingConsumerSequence(Sequence... consumerSequence){
         singleProducerSequencer.addGatingConsumerSequenceList(consumerSequence);
     }
 
